@@ -1,0 +1,46 @@
+{
+	"name": "cy-auto-tests",
+	"version": "1.0.0",
+	"description": "Automation tests",
+	"main": "index.js",
+	"dependencies": {
+		"cypress-failed-log": "^2.5.1",
+		"eslint-plugin-cypress": "^2.7.0",
+		"exceljs": "^3.4.0",
+		"moment-timezone": "^0.5.27",
+		"xlsx": "^0.15.2"
+	},
+	"devDependencies": {
+		"@cypress/code-coverage": "^1.10.2",
+		"cypress": "3.8.3",
+		"cypress-file-upload": "^3.5.0",
+		"cypress-plugin-retries": "^1.4.0",
+		"cypress-wait-until": "^1.6.0",
+		"cypress-xpath": "^1.4.0",
+		"eslint-config-prettier": "^6.7.0",
+		"eslint-plugin-prettier": "^3.1.1",
+		"istanbul-lib-coverage": "^2.0.5",
+		"nyc": "^14.1.1",
+		"prettier": "^1.19.1"
+	},
+	"scripts": {
+		"cypress:open": "cypress open",
+		"cypress:rerun": "CYPRESS_RETRIES=20 npm run cypress:open",
+		"cypress:run": "cypress run  --record --key <cypress-dashboard-key>",
+		"cypress:debug": "DEBUG=cypress:* npm run cypress:open",
+		"cypress-run-record-qa": "cypress run --record --key <cypress-dashboard-key>",
+		"cypress-run-record-preprod": "cypress run --record --key <cypress-dashboard-key> --env configFile=preprod",
+		"cypress-run-record-uat": "cypress run --record --key <cypress-dashboard-key> --env configFile=uat",
+		"cypress-run-qa": "cypress run --env configFile=qa",
+		"cypress-run-preprod": "cypress run --env configFile=preprod",
+		"cypress-run-uat": "cypress run --env configFile=uat",
+		"cypress-open-qa": "cypress open --env configFile=qa",
+		"cypress-open-preprod": "cypress open --env configFile=preprod",
+		"cypress-open-uat": "cypress open --env configFile=uat",
+		"cypress-open-qa-sanity": "cypress open --env configFile=qa.sanity",
+		"cypress-open-uat-sanity": "cypress open --env configFile=uat.sanity",
+		"cypress-open-preprod-sanity": "cypress open --env configFile=preprod.sanity"
+	},
+	"author": "",
+	"license": "ISC"
+}
