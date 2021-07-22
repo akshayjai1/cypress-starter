@@ -8,7 +8,7 @@
 		"eslint-plugin-cypress": "^2.7.0",
 		"exceljs": "^3.4.0",
 		"moment-timezone": "^0.5.27",
-		"xlsx": "^0.15.2"
+		"xlsx": "^0.17.0"
 	},
 	"devDependencies": {
 		"@cypress/code-coverage": "^1.10.2",
